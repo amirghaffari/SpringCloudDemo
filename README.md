@@ -24,7 +24,7 @@ To run the config server
     $ mvn spring-boot:run
 ```
 
-To verify if the config server is up and running, you can check the *student microservice* configuration at http://localhost:8888/student-service/default.
+To verify if the config server is up and running, you can check the *student microservice* configuration at http://localhost:8888/student-service/default/main.
 
 This example uses [Netflix Eureka service registry](https://github.com/spring-cloud/spring-cloud-netflix) where all microservices can register themselves and discover other registered microservices.
 
