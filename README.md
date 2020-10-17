@@ -59,5 +59,11 @@ Now that the Config and Registry Services are up and running, you can run the *S
  - http://localhost:8003/enrollments/student/1
  - http://localhost:8003/enrollments/year/2020
 
- 
- 
+ How to Scale?
+---
+We already have one *student* service running on the port *8001*. To add another *student* service on the port *8004*, use the below command line:
+ ```
+    $ cd SpringCloudDemo/student-service
+    $ mvn spring-boot:run -Dspring-boot.run.arguments=--student.server.port=8004
+```
+You can verify if the new *student* service is running correctly at the Eureka console (http://localhost:9000/). As the *enrollment* microservice uses Eureka service registory to communicate with the *student* service, the Spring Cloud LoadBalancer manages routing decisions between the two available services.
